@@ -3,14 +3,24 @@ import { connect } from "../../store";
 
 import HomeContainer from "./HomeContainer";
 import HomeComponent from "./HomeComponent";
+import { PropTypes } from "mobx-react";
 
-const Container = connect(
+const HomeContainerWithConnect = connect(
   HomeContainer,
-  ["userStore", "uiStore"]
+  ["fipeStore"]
 );
 
-function HomeMain(props) {
-  return <Container viewComponent={HomeComponent} {...props} />;
+function Home(props) {
+  return (
+    <HomeContainerWithConnect
+      componentToBeEncapsulated={HomeComponent}
+      {...props}
+    />
+  );
 }
 
-export default HomeMain;
+Home.propTypes = {
+  props: PropTypes.any
+};
+
+export default Home;

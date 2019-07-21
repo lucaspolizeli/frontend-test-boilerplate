@@ -2,15 +2,17 @@ import * as React from "react";
 
 class HomeContainer extends React.Component {
   render() {
-    const ViewComponent = this.props.viewComponent;
+    const ComponentEncapsulated = this.props.componentToBeEncapsulated;
+
     const {
-      userStore: { welcome }
+      fipeStore: { welcome }
     } = this.props;
-    const viewComponentProps = {
+
+    const componentEncapsulatedProps = {
       welcome
     };
 
-    return <ViewComponent {...viewComponentProps} />;
+    return <ComponentEncapsulated {...componentEncapsulatedProps} />;
   }
 }
 
