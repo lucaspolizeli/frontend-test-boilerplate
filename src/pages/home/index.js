@@ -3,7 +3,6 @@ import { connect } from "../../store";
 
 import HomeContainer from "./HomeContainer";
 import HomeComponent from "./HomeComponent";
-import { PropTypes } from "mobx-react";
 
 const HomeContainerWithConnect = connect(
   HomeContainer,
@@ -11,16 +10,7 @@ const HomeContainerWithConnect = connect(
 );
 
 function Home(props) {
-  return (
-    <HomeContainerWithConnect
-      componentToBeEncapsulated={HomeComponent}
-      {...props}
-    />
-  );
+  return <HomeContainerWithConnect homeComponent={HomeComponent} {...props} />;
 }
-
-Home.propTypes = {
-  props: PropTypes.any
-};
 
 export default Home;

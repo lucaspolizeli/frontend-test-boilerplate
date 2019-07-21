@@ -2,17 +2,17 @@ import * as React from "react";
 
 class HomeContainer extends React.Component {
   render() {
-    const ComponentEncapsulated = this.props.componentToBeEncapsulated;
+    const HomeComponent = this.props.homeComponent;
 
     const {
-      fipeStore: { welcome }
+      fipeStore: { brands }
     } = this.props;
 
-    const componentEncapsulatedProps = {
-      welcome
+    const homeComponentProps = {
+      brands
     };
 
-    return <ComponentEncapsulated {...componentEncapsulatedProps} />;
+    return <HomeComponent {...homeComponentProps} />;
   }
 }
 
