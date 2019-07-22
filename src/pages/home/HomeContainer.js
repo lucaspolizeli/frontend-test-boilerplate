@@ -5,11 +5,31 @@ class HomeContainer extends React.Component {
     const HomeComponent = this.props.homeComponent;
 
     const {
-      fipeStore: { brands }
+      fipeStore: {
+        brands,
+        models,
+        carYears,
+        selectedBrand,
+        selectedModel,
+        carInformation,
+        selectedCarYear,
+        setSelectedModel,
+        setSelectedBrand,
+        setSelectedCarYear
+      }
     } = this.props;
 
     const homeComponentProps = {
-      brands
+      brands,
+      models,
+      carYears,
+      selectedBrand,
+      selectedModel,
+      carInformation,
+      selectedCarYear,
+      setSelectedModel,
+      setSelectedBrand,
+      setSelectedCarYear
     };
 
     return <HomeComponent {...homeComponentProps} />;

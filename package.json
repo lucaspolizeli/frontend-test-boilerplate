@@ -5,10 +5,10 @@
   "dependencies": {
     "mobx": "4.8.0",
     "mobx-react": "^5.4.3",
-    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8",
+    "react-select": "^3.0.4",
     "styled-components": "^4.3.2"
   },
   "scripts": {
